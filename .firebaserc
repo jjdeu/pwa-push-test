@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "pwa-test-dev",
-    "acceptatie": "pwa-test-acc"
+    "acceptatie": "pwa-test-acc",
+    "prod": "pwa-test-prod"
   }
 }
