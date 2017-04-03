@@ -6,6 +6,10 @@ Progressive Web App build with Angular 4. Some PWA tests: installable, offline s
 
 The ServiceWorker only works if the app is build with --prod flag
 
+Debug:
+
+`npm start`
+
 Build with:
 
 `npm run build:dev`

@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "start http://127.0.0.1:8887 & ng serve -port 8887",
+    "start": "start http://localhost:4200 & ng serve --env=dev --sourcemap --prod -port 4200",
     "build:dev": "ng build --env=dev --prod",
     "build:acc": "ng build --env=acc --prod",
     "build:prod": "ng build --env=prod --no-sourcemap --prod",
