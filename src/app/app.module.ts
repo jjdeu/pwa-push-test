@@ -1,5 +1,5 @@
-import { MaterialModule } from "@angular/material";
-import { BrowserModule } from '@angular/platform-browser';
+import { MdIconRegistry, MaterialModule } from "@angular/material";
+import { DomSanitizer, BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -28,4 +28,12 @@ import { NgServiceWorker } from "@angular/service-worker";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'rotation',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/material/rotation.svg'));
+  }
+
+}

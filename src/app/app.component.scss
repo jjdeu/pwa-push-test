@@ -1,0 +1,44 @@
+// Always give the header-card about a third of the viewport
+$header-height: 50vh;
+$header-font-size: 5vh;
+
+$icon-size-small: 5vw;
+$icon-size-medium: 8vw;
+
+$icon-size-v: 15;
+$icon-size-large-w: $icon-size-v * 1vw;
+$icon-size-large-h: $icon-size-v * 1vh;
+
+#app-header {
+
+  text-align: center;
+
+  min-height: $header-height;
+
+  color: white;
+
+  ion-icon#phone {
+    font-size: $icon-size-large-h;
+    position: absolute;
+    top: $header-height / 2 - $icon-size-large-h / 2;
+    left: 100vw / 2 - $icon-size-large-w / 2;
+  }
+
+  ion-icon#menu {
+    font-size: $icon-size-medium;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}
+
+.grad {
+  background: linear-gradient(to bottom, #FF595F 0%, #F4445D 100%);
+}
+
+
+.example-fill-remaining-space {
+  // This fills the remaining space, by using flexbox.
+  // Every toolbar row uses a flexbox row layout.
+  flex: 1 1 auto;
+}
