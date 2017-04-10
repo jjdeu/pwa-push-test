@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { SubscriptionsService } from "./shared/services/subscriptions.service";
 import { NgServiceWorker } from "@angular/service-worker";
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgServiceWorker } from "@angular/service-worker";
   ],
   providers: [
     NgServiceWorker,
-    SubscriptionsService
+    SubscriptionsService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
